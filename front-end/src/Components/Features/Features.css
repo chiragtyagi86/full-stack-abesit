@@ -1,0 +1,87 @@
+.features {
+    display: flex;
+    width: 100%;
+
+    gap: 20px;
+    justify-content: space-around;
+    /* height: 80vh; */
+    margin-top: 30px;
+}
+
+.main {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.main h2 {
+    color: #004E98;
+    margin-left: 35px;
+    font-size: 30px;
+}
+
+.main h1 {
+    color: #063142;
+    margin-left: 30px;
+    font-size: 3rem;
+}
+
+.main p {
+    text-align: justify;
+    margin-left: 45px;
+}
+
+.main ul {
+    display: grid;
+    margin: 20px;
+    grid-template-columns: auto auto;
+}
+
+.main ul li {
+    cursor: pointer;
+    list-style: lower-greek;
+    margin: 20px;
+    font-size: 18px;
+    color: #505050;
+}
+
+.card {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 30px;
+    box-shadow: 2px 4px 6px black;
+    background: #f2f5f6;
+}
+
+.card button {
+    font-size: 18px;
+    padding: 10px 40px 10px 40px;
+    background-color: #05cf9642;
+    border: none;
+    color: #1c1c1c;
+    border-radius: 25px;
+}
+
+.card button:hover {
+    cursor: pointer;
+    color: white;
+    background: rgb(255, 94, 36);
+}
+
+.card h2 {
+    margin: 10px 30px 10px 30px;
+}
+
+.card h1 {
+    margin: 20px 10px 20px 10px;
+}
+
+.card p {
+    font-size: 20px;
+}
+.card a{
+    text-decoration: none;
+    display: block;
+}

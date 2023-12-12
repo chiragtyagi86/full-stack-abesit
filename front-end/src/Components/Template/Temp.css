@@ -1,0 +1,35 @@
+.temp{
+    height: 20vh;
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  background-image: url(https://www.abesit.in/wp-content/themes/abesit/images/college-of-pharmacy-bg.jpg);
+}
+.temp p{
+    color: white;
+    font-size: 22px;
+    width: 50%;
+    text-align: justify;
+}
+.temp hr{
+    height: 60px;
+    opacity: 0.1;
+}
+.temp button{
+    padding: 20px 50px 20px 50px;
+    background: #ff6600;
+    border: none;
+    color: white;
+    font-size: 22px;
+    border-radius: 22px;
+}
+button span{
+    background: white;
+    color: black;
+    padding: 4px;
+    border-radius: 50%;
+}
+button:hover{ 
+    box-shadow: 2px 4px 6px black;
+}
