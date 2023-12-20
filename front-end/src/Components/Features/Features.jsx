@@ -24,11 +24,11 @@ const Features = () => {
       </h2>
       <h1>Admission 2023</h1>
       <p>applications are now open</p>
-      <button>Fee Structure</button>
+      <button id='feat'>Fee Structure</button>
 
       <a href="/">Lorem ipsum dolor sit amet.</a>
       <a href="/">Lorem ipsum dolor sit amet.</a>
-      <button>apply online</button>
+      <button id='feat'>apply online</button>
      </div>
     </div>
   )

@@ -1,0 +1,20 @@
+.buses{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bus-card{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    margin: 10px;
+    justify-content: center;
+}
+.box{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid black;
+    justify-content: space-around;
+}

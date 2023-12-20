@@ -3,6 +3,7 @@ import Slider from '../Slider/Slider'
 import Features from '../Features/Features'
 import Reser from '../Section & Reserch/Reser'
 import Temp from '../Template/Temp'
+import Students from '../Students/Students'
 
 const Hero = () => {
   return (
@@ -11,6 +12,7 @@ const Hero = () => {
       <Features/>
       <Temp/>
       <Reser/>
+      <Students/>
        </div>
   )
 }

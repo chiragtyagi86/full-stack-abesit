@@ -55,7 +55,7 @@
     background: #f2f5f6;
 }
 
-.card button {
+#feat {
     font-size: 18px;
     padding: 10px 40px 10px 40px;
     background-color: #05cf9642;
@@ -64,7 +64,7 @@
     border-radius: 25px;
 }
 
-.card button:hover {
+#feat :hover {
     cursor: pointer;
     color: white;
     background: rgb(255, 94, 36);

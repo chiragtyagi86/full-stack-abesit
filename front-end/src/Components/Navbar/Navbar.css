@@ -1,11 +1,14 @@
 .navbar{
     /* color: white; */
-    box-shadow: 2px 4px 6px black;
+    /* box-shadow: 2px 4px 6px black; */
     width: 100%;
     display: flex;
     color: white;
-    background: #282828;
+    /* background: #282828; */
     align-items: center;
+    position: absolute;
+    top: 0;
+    z-index: 10;
     justify-content: space-around;
 }
 
@@ -30,5 +33,6 @@
     position: fixed;
     top: 0;
     width: 100%;
+    background-color: black;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }

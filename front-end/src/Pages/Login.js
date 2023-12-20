@@ -1,55 +1,34 @@
-// src/App.js
-import React, { useState } from 'react';
+import React from 'react'
 import './Css/Login.css'
-import axios from 'axios';
-
-import { ToastContainer, toast } from 'react-toastify';
-
-import "react-toastify/dist/ReactToastify.css";
-
-function App() {
-  const [formData, setFormData] = useState({
-    username: '',
-    email: '',
-    password: '',
-  });
-  const notify = () => 
-  
-  toast("USER REGESTERD");
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      const response = await axios.post('http://localhost:3500/api/register', formData);
-      console.log(response.data);
-
-    } catch (error) {
-      console.error(error.response.data);
-      // Handle error, display an error message, or redirect to an error page
-    }
-  };
-
+import {Link} from 'react-router-dom';
+const Login = () => {
   return (
-    <div className="login">
-      <h1>Registration Form</h1>
-      <form onSubmit={handleSubmit}>
+    <div>
+      <div id='banner'></div>
+      <div className="login">
 
-          <input type="text" name="username" onChange={handleChange} placeholder='USERNAME' required />
+      <div className="login-left">
+        <h1>LOGIN</h1>
+      </div>
+      <div className="login-right">
+      
+      <Link to='/stdLogin'>
+       <div className="link">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbIrHmdP9tQMLbfp-Wv5M63BGN_tNQKvACiA&usqp=CAU" alt="" />
+          <h2>LOGINN AS STUDENT</h2>
+        </div>
+      </Link> 
 
-          <input type="email" name="email" onChange={handleChange} placeholder='EMAIL' required />
-
-          <input type="password" name="password" onChange={handleChange} placeholder='PASSWORD' required />
-
-        <button type="submit" onClick={notify}>SUBMIT REVIEW</button>
-        <ToastContainer/>
-      </form>
+      <Link to='/facultyLogin'>
+        <div className="link">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIF-wyvLq4F5Kym4ROkUsANwjdRvs0EFxOtg&usqp=CAU" alt="" />
+         <h2> LOGIN AS FACULTY</h2>
+        </div>
+      </Link>
+      </div>
     </div>
-  );
+      </div>
+  )
 }
 
-export default App;
+export default Login

@@ -34,8 +34,8 @@ const Navbar = () => {
      <Link to="/" style={{textDecoration: 'none', color: 'white'} }>   <li className="items">HOME</li></Link>
         <li className="items">About</li>
         <li className="items">Team</li>
-       <Link to="/login" style={{textDecoration: 'none', color: 'white'} } ><li className="items">ENQUIRY</li></Link>
-        <li className="items">LIST ENQIREY</li>
+       <Link to="/login" style={{textDecoration: 'none', color: 'white'} } ><li className="items">LOGIN</li></Link>
+        <li className="items">CONTACT</li>
         {/* <li className="items"></li> */}
      </div>
     </div>
