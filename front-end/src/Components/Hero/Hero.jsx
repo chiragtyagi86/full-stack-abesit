@@ -12,7 +12,6 @@ const Hero = () => {
       <Features/>
       <Temp/>
       <Reser/>
-      <Students/>
        </div>
   )
 }

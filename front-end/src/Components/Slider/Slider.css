@@ -4,17 +4,18 @@
     top: 0;
     max-width: 100%;
     margin: 0 auto;
+    
     overflow: hidden;
   }
   
   .slider {
     display: flex;
+    height: 100vh;
     transition: transform 0.5s ease-in-out;
   }
   
   img {
     width: 100%;
-    height: auto;
   }
   
   .btn {
