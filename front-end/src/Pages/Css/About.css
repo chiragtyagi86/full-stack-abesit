@@ -1,0 +1,88 @@
+.banner{
+    height: 20vh;
+    background-color: black;
+}
+.about{
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-around !important;
+    margin: 60px;
+    padding: 20px;
+    background: linear-gradient(white,wheat);
+border-top-left-radius: 70%;
+border-bottom-right-radius: 90%;
+
+}
+.about h2{
+    font-size: 1.65rem;
+}
+.about P{
+    font-size: 20px;
+    margin: 20px;
+}
+.about2{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    margin: 60px;
+    padding: 20px;
+}
+.about2-left{
+    width: 100%;
+
+}
+.about-right img{
+    border-radius: 20px;
+    margin: 10px;
+}
+.about2-left img{
+    border-radius: 20px;
+    margin: 10px;
+}.grid img{
+    border-radius: 20px;
+}
+.about2-right{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+    padding: 50px;
+}
+.about2-right ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+}
+.about2-right ul li{
+    padding: 20px;
+    font-size: 20px;
+    list-style: decimal-leading-zero;
+}
+.grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+}
+.yes h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-left{
+    margin: 50px;
+width: 90%;
+}
+.about-right{
+    width: 100%;
+}
+.grid div{
+    margin: 20px;
+}

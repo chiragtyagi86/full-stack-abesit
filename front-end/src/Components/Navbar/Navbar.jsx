@@ -32,11 +32,10 @@ const Navbar = () => {
      </div>
      <div className="menu-items">
      <Link to="/" style={{textDecoration: 'none', color: 'white'} }>   <li className="items">HOME</li></Link>
-        <li className="items">About</li>
-        <li className="items">Team</li>
+        <Link to="/about" style={{textDecoration: 'none', color: 'white'} } ><li className="items">ABOUT</li></Link>
+        <Link to="/team" style={{textDecoration: 'none', color: 'white'} } ><li className="items">Team</li></Link>
        <Link to="/login" style={{textDecoration: 'none', color: 'white'} } ><li className="items">LOGIN</li></Link>
-        <li className="items">CONTACT</li>
-        {/* <li className="items"></li> */}
+       <Link to="/contact" style={{textDecoration: 'none', color: 'white'} } ><li className="items">Contact</li></Link>
      </div>
     </div>
   );

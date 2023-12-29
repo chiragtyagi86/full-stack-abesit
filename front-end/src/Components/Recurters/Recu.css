@@ -1,0 +1,22 @@
+.recu{
+    display: flex;
+    align-items: center;
+    justify-content: auto;
+    height: 50vh;
+    background-color: white;
+    flex-direction: column;
+
+}
+.recu h1{
+    text-align: center;
+}
+.grid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

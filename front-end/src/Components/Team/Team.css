@@ -1,0 +1,36 @@
+.team{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 50px;
+}
+    .poi h1{
+        text-align: center;
+        margin: 50px;
+    }
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    box-shadow: 2px 4px 6px black;
+}
+.card-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.card-img img{
+    /* aspect-ratio: 3/2;
+    object-fit: cover; */
+}
+.card-data{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 20px;
+
+}

@@ -43,7 +43,7 @@
 
 .main ul li {
     cursor: pointer;
-    list-style: lower-greek;
+	list-style: decimal-leading-zero;
     margin: 20px;
     font-size: 18px;
     color: #505050;

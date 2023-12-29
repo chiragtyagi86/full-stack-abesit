@@ -10,7 +10,7 @@
   
   .slider {
     display: flex;
-    height: 100vh;
+    height: max-content;
     transition: transform 0.5s ease-in-out;
   }
   

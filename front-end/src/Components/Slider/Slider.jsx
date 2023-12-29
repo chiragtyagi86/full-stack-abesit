@@ -1,12 +1,12 @@
-
-import React, { useState, useEffect } from 'react';
-import './Slider.css'; 
+import React, { useState, useEffect } from "react";
+import "./Slider.css";
 
 const images = [
-  'https://www.abesit.in/wp-content/uploads/2023/07/desktop-banner-abesit.webp',
-'https://www.abesit.in/wp-content/uploads/2023/05/abes_img.jpg',
-  'https://www.abesit.in/wp-content/uploads/2023/05/home-ban-2-scaled.jpg',
-  // Add more image URLs as needed
+  "https://www.abesit.in/wp-content/uploads/2023/07/desktop-banner-abesit.webp",
+  "https://www.abesit.in/wp-content/uploads/2023/05/abes_img.jpg",
+  "https://www.abesit.in/wp-content/uploads/2023/05/home-ban-2-scaled.jpg",
+  "https://www.abesit.in/wp-content/uploads/2023/05/home-ban-3-scaled.jpg",
+  "https://www.abesit.in/wp-content/uploads/2023/05/home-ban-1-scaled.jpg",
 ];
 
 const Slider = () => {
@@ -17,7 +17,9 @@ const Slider = () => {
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
   };
 
   useEffect(() => {
@@ -32,18 +34,19 @@ const Slider = () => {
 
   return (
     <div className="slider-container">
-      <div className="slider" style={{ transform: `translateX(${-currentIndex * 100}%)` }}>
+      <div
+        className="slider"
+        style={{ transform: `translateX(${-currentIndex * 100}%)` }}
+      >
         {images.map((image, index) => (
           <img key={index} src={image} alt={`Img ${index + 1}`} />
         ))}
       </div>
       <button className="prev btn" onClick={prevSlide}>
-      &lt;
-
-
+        &lt;
       </button>
       <button className="next btn" onClick={nextSlide}>
-      &gt; 
+        &gt;
       </button>
     </div>
   );
