@@ -1,0 +1,33 @@
+.mainblue{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: solid; */
+    height: 80vh;
+    flex-direction: column;
+
+}
+.pic img{
+    width: 200px;
+}
+.mainnav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: solid;
+}
+.mainnav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.mainnav ul li{
+    list-style: none;
+    /* margin: 10px; */
+    /* border: solid; */
+    background: yellow;
+    padding: 15px 25px 15px 25px;
+    
+}

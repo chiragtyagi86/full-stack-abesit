@@ -1,0 +1,53 @@
+.doip{
+    background: url(
+        "https://www.abesit.in/wp-content/uploads/2023/07/desktop-banner-abesit.webp");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    background-repeat: no-repeat;
+}
+.my-flex{
+    display: flex;
+    margin-top: 100px;
+    margin-left: 300px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.login-containerp{
+    position: absolute;
+    margin: 40px;
+    background: rgba(255, 255, 255, 0.872);
+    backdrop-filter: blu(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 5px;
+
+}
+.login-containerp h2{
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px;
+}
+.login-containerp input{
+    background: transparent;
+    border: solid 1px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.login-containerp label{
+    font-size: 20px;
+    margin: 10px;
+}
+.login-containerp button{
+    padding: 15px 25px 15px 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 20px;
+    background: rgb(16, 112, 230);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}

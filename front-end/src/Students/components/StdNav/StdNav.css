@@ -1,0 +1,70 @@
+.stdnav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: rgb(88, 88, 88); */
+    color: white;
+    padding: 20px;
+/* margin-bottom: 20px; */
+
+}
+.brand{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.brand img{
+    width: 140px;
+}
+.stdnav-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stdnav-list ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.stdnav-list ul lI{
+    margin: 20px;
+    list-style: none;
+    font-weight: 600;
+}
+.icons button{
+    padding: 15px 25px 15px 25px;
+    background: transparent;
+    border: solid 2px;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 10px;
+}
+.icons button :hover{
+        box-shadow: 0px 0px 0px white;
+}
+.mycard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+    padding: 20px;
+    margin: 30px;
+    width: 350px;
+    border-radius: 25px;
+    /* margin-left: 30px; */
+    background: rgba(255, 255, 255, 0.716);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(12px);
+
+}
+.mycard img{
+    width: 50px;
+}
+.grid0{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background: url("https://www.abesit.in/wp-content/uploads/2023/07/desktop-banner-abesit.webp");
+    background-size: cover;
+    height: 100vh;
+}

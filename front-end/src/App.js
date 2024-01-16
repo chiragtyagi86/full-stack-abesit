@@ -10,12 +10,14 @@ import Land from './Students/Land'
 import About from './Pages/About';
 import Contact from './Pages/Contact';
 import Team from './Components/Team/Team';
+import Regis from './Components/Login/Regis';
+import Dashbord from './Components/Screen/Dashbord/Dashbord';
 
 function App() {
   return (
 <>
     <BrowserRouter>
-    <Navbar/>
+    {/* <Navbar/> */}
     <Routes>
       <Route path='/' element={<Hero/>}/>
       <Route path='/about' element={<About/>}/>
@@ -23,10 +25,12 @@ function App() {
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/team' element={<Team/>}/>
       <Route path='/stdLogin' element={<StdLogin/>}/>
-      <Route path='/faculty' element={<FacltyLogin/>}/>
+      <Route path='/FacltyLogin' element={<FacltyLogin/>}/>
       <Route path='/student' element={<Land/>}/>
+      <Route path='/create' element={<Regis/>}/>
+      <Route path='/Dashbord' element={<Dashbord/>}/>
     </Routes>
-    <Footer/>
+    {/* <Footer/> */}
     </BrowserRouter>
     
 </>

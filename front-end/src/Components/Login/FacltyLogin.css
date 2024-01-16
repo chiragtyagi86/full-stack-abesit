@@ -1,0 +1,43 @@
+.login-op{
+    background: url(
+        "https://www.abesit.in/wp-content/uploads/2023/07/desktop-banner-abesit.webp");
+    background-size: cover;
+    height: 100vh;
+}
+.login-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 40px;
+    background: rgba(255, 255, 255, 0.872);
+    backdrop-filter: blu(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* height: 300px; */
+    border-radius: 5px;
+
+}
+.login-container h2{
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px;
+}
+.login-container input{
+    background: transparent;
+    border: solid 1px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.login-container label{
+    font-size: 20px;
+    margin: 10px;
+}
+.login-container button{
+    padding: 15px 25px 15px 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 20px;
+    background: rgb(16, 112, 230);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}

@@ -3,9 +3,12 @@ import './Team.css'
 import divu from '../Assets/divu.jpg'
 import moti from '../Assets/moti.jpg'
 import dhulu from '../Assets/op.jpg'
+import Navbar from '../Navbar/Navbar'
+import Footer from '../Footer/Footer'
 const Team = () => {
   return (
 <div className='poi'>
+    <Navbar/>
 <div className="banner"></div>
         <h1>"MEET OUR TEAM"</h1>
     <div className="team">
@@ -50,6 +53,7 @@ const Team = () => {
             </div>
         </div>
     </div>
+    <Footer/>
 </div>
 
   )

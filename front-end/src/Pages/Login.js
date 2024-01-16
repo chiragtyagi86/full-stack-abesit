@@ -1,9 +1,12 @@
 import React from 'react'
 import './Css/Login.css'
 import {Link} from 'react-router-dom';
+import Navbar from '../Components/Navbar/Navbar';
+import Footer from '../Components/Footer/Footer';
 const Login = () => {
   return (
     <div>
+      <Navbar/>
       <div id='banner'></div>
       <div className="login">
 
@@ -19,7 +22,7 @@ const Login = () => {
         </div>
       </Link> 
 
-      <Link to='/facultyLogin'>
+      <Link to='/FacltyLogin'>
         <div className="link">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIF-wyvLq4F5Kym4ROkUsANwjdRvs0EFxOtg&usqp=CAU" alt="" />
          <h2> LOGIN AS FACULTY</h2>
@@ -27,6 +30,7 @@ const Login = () => {
       </Link>
       </div>
     </div>
+    <Footer/>
       </div>
   )
 }

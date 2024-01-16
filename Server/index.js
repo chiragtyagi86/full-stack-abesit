@@ -1,45 +1,72 @@
-// server.js
 const express = require("express");
 const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
 const cors = require("cors");
+const StudentModel = require("./models/Student");
+const FacultyModel = require("./models/Faculty");
+
 
 const app = express();
-const PORT = process.env.PORT || 3500;
-
+app.use(express.json());
 app.use(cors());
-app.use(bodyParser.json());
 
-// MongoDB connection
 mongoose.connect(
-  "mongodb+srv://root:Dabur%40123@cluster0.29yjgjn.mongodb.net/ABESIT",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
+  "mongodb+srv://root:Dabur%40123@cluster0.29yjgjn.mongodb.net/ABESIT"
 );
 
-const userSchema = new mongoose.Schema({
-  username: String,
-  email: String,
-  password: String,
+
+
+app.post("/regis", (req, res) => {
+  StudentModel.create(req.body)
+    .then((student) => res.json(student))
+    .catch((err) => res.json(err));
+});
+app.post("/login", (req, res) => {
+  const { username, password } = req.body;
+  StudentModel.findOne({ username: username }).then((user) => {
+    if (user) {
+      if (user.password == password) {
+        res.json("success");
+      } else {
+        res.json("pass is incorect");
+      }
+    } else {
+      res.json("error 404 user not found");
+    }
+  });
 });
 
-const User = mongoose.model("User", userSchema);
+// for faculty api
 
-app.post("/api/register", async (req, res) => {
+app.post("/regis2", (req, res) => {
+  FacultyModel.create(req.body)
+    .then((faculty) => res.json(faculty))
+    .catch((err) => res.json(err));
+});
+
+app.post("/faculty", (req, res) => {
+  const { empID, fpassword } = req.body;
+  FacultyModel.findOne({ empID: empID }).then((user) => {
+    if (user) {
+      if (user.fpassword == fpassword) {
+        res.json("success");
+      } else {
+        res.json("pass is incorect");
+      }
+    } else {
+      res.json(" error 404 User Not Found ");
+    }
+  });
+});
+
+app.get("/students", async (req, res) => {
   try {
-    const { username, email, password } = req.body;
-    const newUser = new User({ username, email, password });
-    await newUser.save();
-    res
-      .status(200)
-      .json({ success: true, message: "User registered successfully." });
-  } catch (error) {
-    res.status(500).json({ success: false, error: error.message });
+    const students = await StudentModel.find().exec();
+    res.json(students);
+  } catch (err) {
+    res.status(500).send(err);
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.listen(3001, () => {
+  console.log("server is running");
 });
