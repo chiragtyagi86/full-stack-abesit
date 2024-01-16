@@ -15,6 +15,57 @@ mongoose.connect(
 
 
 
+
+    // my bashiho
+
+    app.get('/api/attendance/:username', async (req, res) => {
+      const { username } = req.params;
+    
+      try {
+        const students = await StudentModel.findOne({ username });
+        if (!students) {
+          return res.status(404).json({ message: 'User not found' });
+        }
+        res.json({ attendanceCount: students.attendance });
+      } catch (error) {
+        console.error('Error fetching attendance count:', error);
+        res.status(500).json({ message: 'Internal server error' });
+      }
+    });
+    
+    // Endpoint to mark attendance for a specific user (A for Absent, P for Present)
+    app.post('/api/markAttendance/:username', async (req, res) => {
+      const { username } = req.params;
+      const { type } = req.body;
+    
+      try {
+        const user = await StudentModel.findOne({ username });
+    
+        if (!user) {
+          return res.status(404).json({ message: 'User not found' });
+        }
+    
+        if (type === 'P') {
+          user.attendance += 1;
+        }
+    
+        // Save the updated attendance to the database
+        await user.save();
+    
+        res.json({ message: `Attendance marked as ${type}`, attendanceCount: user.attendance });
+      } catch (error) {
+        console.error('Error marking attendance:', error);
+        res.status(500).json({ message: 'Internal server error' });
+      }
+    });
+    
+
+    // magdiuadh
+
+
+
+
+
 app.post("/regis", (req, res) => {
   StudentModel.create(req.body)
     .then((student) => res.json(student))
@@ -66,6 +117,43 @@ app.get("/students", async (req, res) => {
     res.status(500).send(err);
   }
 });
+
+
+
+
+
+// Endpoint to get attendance count
+app.get('/api/attendance', async (req, res) => {
+  try {
+    const students = await StudentModel.findOne();
+    res.json({ attendanceCount: students.attendance });
+  } catch (error) {
+    console.error('Error fetching attendance count:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+// Endpoint to mark attendance (A for Absent, P for Present)
+app.post('/api/markAttendance', async (req, res) => {
+  const { type } = req.body;
+
+  try {
+    const students = await StudentModel.findOne();
+
+    if (type === 'P') {
+      students.attendance += 1;
+    }
+
+    // Save the updated attendance to the database
+    await students.save();
+
+    res.json({ message: `Attendance marked as ${type}`, attendanceCount: user.attendance });
+  } catch (error) {
+    console.error('Error marking attendance:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
 
 app.listen(3001, () => {
   console.log("server is running");

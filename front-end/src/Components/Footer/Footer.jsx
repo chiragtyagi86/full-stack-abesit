@@ -10,12 +10,12 @@ const Footer = () => {
               <img src={logo} alt="" />
             </div>
             <div className="list">
-                <ul>
+                {/* <ul>
                   <li>HOME</li>
                   <li>About</li>
                   <li>section</li>
                   <li>ready</li>
-                </ul>
+                </ul> */}
             </div>
             <div className="footer-icons">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 24 24"
@@ -39,7 +39,7 @@ const Footer = () => {
             </div>ƒ
         </div>
         <div className="lower">
-            <p>Copyright © 2023 Bookishfy all right reserve | @chiragtyagi
+            <p>Copyright © 2023 ABESIT all right reserve | @chiragtyagi
             </p>
         </div>
     </div>

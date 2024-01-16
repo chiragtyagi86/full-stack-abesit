@@ -5,7 +5,8 @@ const StudentSchema = new mongoose.Schema({
     name: String,
     roll_no: String,
     password: String,
-    image: String
+    image: String,
+    attendance: { type: Number, default: 0 }
 })
 
 const StudentModel = mongoose.model("student", StudentSchema)
