@@ -30,6 +30,7 @@ function App() {
       <Route path='/create' element={<Regis/>}/>
       <Route path='/Dashbord' element={<Dashbord/>}/>
     </Routes>
+    
     {/* <Footer/> */}
     </BrowserRouter>
     

@@ -5,6 +5,7 @@ const StudentModel = require("./models/Student");
 const FacultyModel = require("./models/Faculty");
 
 
+    
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -33,7 +34,8 @@ mongoose.connect(
       }
     });
     
-    // Endpoint to mark attendance for a specific user (A for Absent, P for Present)
+      // atendenca
+
     app.post('/api/markAttendance/:username', async (req, res) => {
       const { username } = req.params;
       const { type } = req.body;
